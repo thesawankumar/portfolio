@@ -1,8 +1,4 @@
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaTwitter,
-} from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa6";
 
 import { CiSaveDown1 } from "react-icons/ci";
 import { Link } from "react-router-dom";
@@ -27,7 +23,7 @@ const Hero = () => {
           I Am Into <span className="text-red-500">{text}</span>
           <Cursor cursorColor="red" />
         </p>
-        <Link to="/assets/resume.pdf" target="_blank">
+        <Link to="/assets/Sawan kumar resume.pdf" target="_blank">
           <button className="flex gap-2 items-center text-lg lg:text-xl font-bold px-3 lg:px-6 py-1 lg:py-2 bg-primary rounded-3xl  shadow-xl shadow-zinc-500 hover:bg-secondary hover:text-cyan-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
             <p className="cursor-pointer">Resume</p>
             <CiSaveDown1 />
