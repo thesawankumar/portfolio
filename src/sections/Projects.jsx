@@ -1,50 +1,92 @@
-import { ArrowUpRight, Code2, SearchCode } from "lucide-react";
+import { ArrowUpRight, Code2 } from "lucide-react";
 import { data } from "../constants/projectsData";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+// Container animation (stagger children)
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+// Card animation (fade + slide-up)
+const card = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 18 },
+  },
+};
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="flex flex-col justify-center items-center gap-10 py-12 bg-off-white"
-    >
-      <div className="flex gap-3 items-center">
-        <Code2 size={52} className="text-primary" />
-        <h1 className="text-3xl lg:text-5xl font-bold text-secondary">
+    <section id="projects" className="py-16 bg-off-white">
+      {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 120, damping: 15 }}
+        viewport={{ once: true }}
+        className="flex justify-center items-center gap-2 mb-12"
+      >
+        <Code2 size={36} className="text-primary" />
+        <h1 className="text-xl md:text-2xl font-bold text-secondary">
           Projects
         </h1>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      </motion.div>
+
+      {/* Grid */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6 lg:px-16"
+      >
         {data.map((item) => (
-          <div
+          <motion.div
             key={item.id}
-            className="flex flex-col gap-8 justify-center items-center w-30 mx-3 lg:w-[25rem] px-4 py-6 bg-gray-500 rounded-2xl shadow-xl shadow-zinc-500 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300"
+            variants={card}
+            whileHover={{ scale: 1.03, y: -6 }}
+            transition={{ duration: 0.3 }}
+            className="flex flex-col bg-white border border-gray-200 rounded-xl shadow-md p-4 hover:shadow-lg transition-all duration-300"
           >
-            <h1 className="text-xl lg:text-2xl font-semibold text-white">
+            {/* Title */}
+            <h2 className="text-md md:text-lg font-semibold text-gray-800 text-center mb-2">
               {item.label}
-            </h1>
-            <img
+            </h2>
+
+            {/* Image */}
+            <motion.img
               src={item.imgSrc}
-              className="h-30 w-full lg:h-56 rounded-xl transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105 duration-300"
+              alt={item.label}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
+              className="w-full h-36 md:h-44 rounded-lg object-cover mb-3"
             />
-            <p className="text-xs lg:text-lg text-white">{item.desc}</p>
-            <div className="flex gap-x-28 lg:gap-x-40">
-              <Link to={item.view} target="_blank">
-                <button className="bg-cyan-500 flex gap-1 px-2 py-1 text-sm lg:text-lg lg:px-5 lg:py-2 text-white font-semibold rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                  View
-                  <ArrowUpRight size={24} />
-                </button>
-              </Link>
-              <Link to={item.code} target="_blank">
-                <button className="bg-red-500 flex gap-1 px-2 py-1 text-sm lg:text-lg lg:px-5 lg:py-2 text-white font-semibold rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
-                  Code
-                  <SearchCode size={24} />
-                </button>
-              </Link>
+
+            {/* Description */}
+            <p className="text-xs md:text-sm text-gray-600 text-center mb-4">
+              {item.desc}
+            </p>
+
+            {/* Button */}
+            <div className="flex justify-center">
+              <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
+                <Link to={item.view} target="_blank">
+                  <button className="bg-cyan-500 flex items-center gap-1 px-4 py-1.5 text-xs md:text-sm text-white font-medium rounded-md shadow hover:shadow-lg transition">
+                    View <ArrowUpRight size={16} />
+                  </button>
+                </Link>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

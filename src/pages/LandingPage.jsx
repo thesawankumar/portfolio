@@ -1,27 +1,37 @@
-import About from "../sections/About"
-import Contact from "../sections/Contact"
-import Education from "../sections/Education"
-import Footer from "../sections/Footer"
-import Home from "../sections/Home"
-import Projects from "../sections/Projects"
-import Skills from "../sections/Skills"
+import Home from "../sections/Home";
+import About from "../sections/About";
+import Skills from "../sections/Skills";
+import Education from "../sections/Education";
+import Projects from "../sections/Projects";
+import Contact from "../sections/Contact";
+import Footer from "../sections/Footer";
+
 import ScrollToAnchor from "../components/ScrollToAnchor";
-import MobileNavbar from "../components/MobileNavbar"
+import MobileNavbar from "../components/MobileNavbar";
+import Experience from "../sections/Experience";
 
 const LandingPage = () => {
   return (
-    <>  
-        <ScrollToAnchor/>
-        <Home/>
-        <About/>
-        <Skills/>
-        <Education/>
-        <Projects/>
-        <Contact/>
-        <Footer/>
-        <MobileNavbar/>
-    </>
-  )
-}
+    <>
+      {/* Smooth scrolling to anchors */}
+      <ScrollToAnchor />
 
-export default LandingPage
+      {/* Main Sections */}
+      <main className="overflow-x-hidden">
+        <Home />
+        <About />
+        <Skills />
+        <Education />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
+
+      {/* Footer & Mobile Navigation */}
+      <Footer />
+      <MobileNavbar />
+    </>
+  );
+};
+
+export default LandingPage;
