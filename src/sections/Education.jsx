@@ -6,7 +6,7 @@ const educationData = [
     id: 1,
     degree: "Bachelor of Technology in Computer Science Engineering",
     school: "Asansol Engineering College",
-    year: "2021 - 2025 | Pursuing",
+    year: "2021 - 2025 | Completed",
     img: "assets/college.jpg",
   },
   {
