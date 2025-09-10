@@ -32,11 +32,11 @@ const Hero = () => {
         </p>
 
         {/* Resume Button */}
-        <Link to="/assets/Sawan kumar resume.pdf" target="_blank">
+        <Link to="/assets/Sawan-Kumar-Resume.pdf" target="_blank">
           <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="flex gap-2 items-center text-base lg:text-lg font-semibold px-5 py-2.5 bg-primary text-white rounded-full shadow-md hover:bg-secondary hover:text-cyan-400 transition duration-300"
+            className="flex gap-2 items-center text-base text-grey-300 lg:text-lg font-semibold px-5 py-2.5 bg-primary rounded-full shadow-md hover:bg-secondary hover:text-cyan-400 transition duration-300"
           >
             <p>Resume</p>
             <CiSaveDown1 size={20} />
