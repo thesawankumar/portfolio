@@ -7,7 +7,7 @@ const experienceData = [
     id: 1,
     role: "Software Developer Intern",
     company: "Unique Tutor Arc Pvt.",
-    duration: "2/2025 – 07/2025",
+    duration: "02/2025 – 07/2025",
     location: "Delhi",
     bullets: [
       "Spearheaded development of an interactive trading simulation platform using React and Redux with real-time market data and portfolio tracking, increasing engagement by 20%.",
