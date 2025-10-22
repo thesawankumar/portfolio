@@ -7,7 +7,7 @@ const experienceData = [
     id: 1,
     role: "Software Developer Intern",
     company: "Unique Tutor Arc Pvt.",
-    duration: "02/2025 – 07/2025",
+    duration: "03/2025 – 08/2025",
     location: "Delhi",
     bullets: [
       "Spearheaded development of an interactive trading simulation platform using React and Redux with real-time market data and portfolio tracking, increasing engagement by 20%.",
@@ -18,7 +18,7 @@ const experienceData = [
     id: 2,
     role: "Software Developer Intern",
     company: "BoothBloom",
-    duration: "10/2024 – 01/2025",
+    duration: "12/2024 – 02/2025",
     location: "Bengaluru",
     bullets: [
       "Forged real-time availability tracking for the BoothBloom platform using Node.js, Express, and MongoDB, improving page load times by 0.7s.",
@@ -29,7 +29,7 @@ const experienceData = [
     id: 3,
     role: "Full Stack Developer Intern",
     company: "MELE (Make Engineer's Life Easy)",
-    duration: "07/2024 – 10/2024",
+    duration: "08/2024 – 10/2024",
     location: "Chennai",
     bullets: [
       "Deployed a scalable cloud-based solution leveraging AWS services, reducing server costs by 30% and achieving 99.9% uptime.",
