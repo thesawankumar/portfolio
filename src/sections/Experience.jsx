@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const experienceData = [
   {
     id: 1,
-    role: "Software Developer Intern",
-    company: "Unique Tutor Arc Pvt.",
-    duration: "03/2025 – 08/2025",
-    location: "Delhi",
+    role: "Full Stack Developer Intern",
+    company: "Unique Tutor Arc Pvt. (Bro Zones)",
+    duration: "10/2024 – 01/2025",
+    location: "Remote",
     bullets: [
       "Spearheaded development of an interactive trading simulation platform using React and Redux with real-time market data and portfolio tracking, increasing engagement by 20%.",
       "Built a comprehensive admin dashboard with Chart.js for trade visualization, boosting management efficiency by 25%.",
@@ -16,23 +16,23 @@ const experienceData = [
   },
   {
     id: 2,
-    role: "Software Developer Intern",
+    role: "Freelance Full Stack Developer",
     company: "BoothBloom",
-    duration: "12/2024 – 02/2025",
-    location: "Bengaluru",
+    duration: "02/2025 – 05/2025",
+    location: "Remote",
     bullets: [
-      "Forged real-time availability tracking for the BoothBloom platform using Node.js, Express, and MongoDB, improving page load times by 0.7s.",
-      "Engineered secure JWT role-based authentication, real-time availability tracking, and payment integration, reducing authentication errors by 15%.",
+      "Forged real-time availability tracking for the BoothBloom platform using Node.js, Express, and MongoDB, improving page load times by 0.7 seconds for event planners searching for photographers.",
+      "Engineered secure JWT role-based authentication, real-time availability tracking, and payment integration for BoothBloom's event photography booking platform, reducing authentication errors by 15%.",
     ],
   },
   {
     id: 3,
     role: "Full Stack Developer Intern",
     company: "MELE (Make Engineer's Life Easy)",
-    duration: "08/2024 – 10/2024",
-    location: "Chennai",
+    duration: "05/2024 – 09/2024",
+    location: "Remote",
     bullets: [
-      "Deployed a scalable cloud-based solution leveraging AWS services, reducing server costs by 30% and achieving 99.9% uptime.",
+      "Deployed a scalable cloud-based solution leveraging AWS services, reducing server costs by 30% and achieving 99.9% application uptime.",
       "Optimized code and implemented best practices, improving application security, reducing load times by 35%, and enhancing overall stability.",
     ],
   },
