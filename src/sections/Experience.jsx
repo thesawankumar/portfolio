@@ -6,7 +6,7 @@ const experienceData = [
   {
     id: 1,
     role: "Full Stack Developer Intern",
-    company: "Unique Tutor Arc Pvt. (Bro Zones)",
+    company: "Unique Tutor Arc Pvt. (Devi Zones)",
     duration: "10/2024 – 01/2025",
     location: "Remote",
     bullets: [
